@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>html5</title>
-    <style type="text/css">
-    .theme{
-      display: block;
-      width: 200px;
-      font-size: 30px;
-      margin: 100px auto;
-    }
-    </style>
+<html style="width: 100%;height: 100%">
+<head>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+     <script src="bodymovin.js"></script>
 </head>
-<body>
-<div class="theme">
-  Hello, world.
-</div>
+<body style="background-color:#ccc; margin: 0px;height: 100%; font-family: sans-serif;font-size: 10px">
 
+<div style="width:100%;height:100%;background-color:#333;" id="bodymovin"></div>
+
+<script>
+
+    var animData = {
+        wrapper: document.getElementById('bodymovin'),
+        animType: 'html',
+        loop: true,
+        prerender: true,
+        autoplay: true,
+        path: 'data.json'
+
+    };
+    var anim = bodymovin.loadAnimation(animData);
+</script>
 </body>
 </html>
