@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/powerange.css" rel="stylesheet"/>
+    <link href="css/pace-theme-center-atom.css" rel="stylesheet"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/slidingScreen.js"></script>
+    <script src="js/bodymovin.js"></script>
+    <script src="js/pace.js"></script>
+    <script src="js/powerange.min.js"></script>
+    <title>传动系统</title>
+</head>
+<body>
+<div class="main">
+     <audio id="myAudio1">
+        <source src="audio/t1.mp3" type="audio/mpeg">
+    </audio>
+    <div class="tan true">
+        <div class="trueCenter">
+            <img src="images/true.png" class="trueText">
+            <div class="button trueBtn">确定</div>
+        </div>
+    </div>
+    <div class="tan answer1">
+        <div class="trueCenter">
+            <img src="images/shut.png" class="shut">
+            <div class="success">正确答案</div>
+            <!-- <img src="images/c8.png" class="answerImg"> -->
+            <div class="answer1"><p>动力损耗小</p>
+								<p>直线行驶稳定性好</p>
+								<p>空间利用率更高</p>
+								<p>易“推头”</p>
+								<p>易转向不足</p>
+			</div>
+        </div>
+    </div>
+    <div class="tan answer2">
+        <div class="trueCenter">
+            <img src="images/shut.png" class="shut">
+            <div class="success">正确答案</div>
+            <div class="answer22">对</div>
+        </div>
+    </div>
+
+    <div class="tan answer3">
+        <div class="trueCenter">
+            <img src="images/shut.png" class="shut">
+            <div class="success">正确答案</div>
+            <div class="answer33">前置前驱</div>
+        </div>
+    </div>
+
+    <div class="tan false">
+        <div class="trueCenter">
+            <img src="images/false.png" class="trueText">
+            <div class="button falseBtn">重新选择</div>
+        </div>
+    </div>
+    <div class="tan false2">
+        <div class="trueCenter">
+            <img src="images/false.png" class="trueText">
+            <div class="button falseBtn false2Btn">重新选择</div>
+        </div>
+    </div>
+      <img src="images/gogo.png" class="up">
+    <img src="images/gogo.png" class="go">
+    <div class="page1">
+        <div class="page1Box">
+            <!-- <div class="title">SA技术专题</div> -->
+            <!-- <div class="centerT">
+                传动系统
+            </div> -->
+        </div>
+    </div>
+    <div class="page2">
+       <div class="node1">
+           <!-- <div class="title">SA技术专题</div> -->
+           <div class="pageContent" id="bodymovinPage2">
+           </div>
+       </div>
+    </div>
+    <div class="page3">
+        <div class="p3">
+            <!-- <div class="title">SA技术专题</div> -->
+            <div class="pageContent" id="bodymovinPage3">
+            </div>
+        </div>
+    </div>
+    <div class="page4">
+        <div class="p4">
+            <!-- <div class="title">SA技术专题</div> -->
+            <div class="pageContent" id="bodymovinPage4">
+            </div>
+        </div>
+    </div>
+    <div class="page5">
+        <!-- <div class="title">SA技术专题</div> -->
+        <div class="gifContent">
+              <img src="images/handle.png" class="gifImg5 imgBack" id= "gifImg5_1">
+              <img src="images/a1.gif" class="gifImg5" id= "gifImg5_2">
+              <img src="images/a2.gif" class="gifImg5" id= "gifImg5_3">
+        </div>
+        <div class = "power">
+            <input type="text" class="js-min-max-start" style="display: none;">
+        </div>
+    </div>
+    <div class="page6">
+        <!-- <div class="page1Box"> -->
+            <!-- <div class="title">SA技术专题</div> -->
+            <!-- <div class="centerT">
+                离合器
+            </div> -->
+        <!-- </div> -->
+    </div>
+
+    <div class="page7">
+        <div class="p7">
+            <!-- <div class="title">SA技术专题</div> -->
+            <div class="pageContent" id="bodymovinPage7"></div>
+        </div>
+    </div>
+     <div class="page8">
+        <div class="p8">
+            <!-- <div class="title">SA技术专题</div> -->
+            <div class="pageContent" id="bodymovinPage8"></div>
+        </div>
+    </div>
+    <div class="page9">
+        <div class="p9">
+            <!-- <div class="title">SA技术专题</div> -->
+            <div class="pageContent" id="bodymovinPage9"></div>
+            <div class="page9Gif">
+                 <img src="images/2.gif" class="gifImg">
+            </div>
+        </div>
+    </div>
+    <div class="page10">
+        <div class="p10">
+            <!-- <div class="title">SA技术专题</div> -->
+            <div class="pageContent" id="bodymovinPage10"></div>
+        </div>
+    </div>
+     <div class="page11">
+        <div class="p11">
+            <!-- <div class="title">SA技术专题</div> -->
+            <div class="pageContent" id="bodymovinPage11"></div>
+        </div>
+    </div>
+     <div class="page12">
+        <div class="p12">
+        	<!-- 条 -->
+        	<div class="viewHead"></div>
+        	<div class="viewHeadTail"></div>
+        	<div class="viewBottom"></div>
+        	<div class="viewBottomTail"></div>
+        	<div class="viewLeft">
+        		<!-- 课后习题 -->
+	        	<div class="exerciseTitle">课后练习</div>
+	        	<div class="exerciseblock1"></div>
+	        	<div class="exerciseTitleSmall">多选题</div>
+	        	<div class="exerciseblock2"></div>
+
+	        	<div class="exerciseQuestion">1.前置前驱是指发动机放置在车的前部，并采用前轮作为驱动轮。请问前驱车有哪些特点?</div>
+	        	<div class="exerciseImg"><img src="images/bg_img_car.png" /></div>
+        	</div>
+        	<div class="viewRight">
+        		<div class="exerciseChose">请选择正确答案:</div>
+        		<div class="exerciseAnswer list" id="exerciseAnswer">
+        			<div class="cc">
+        			</div>
+        		</div>
+        		<div class="stuName">
+        			 <div class="stuHead"><img src="images/bg_img_avatar_learner.png"/></div>
+        			 <div class="stusNameLabel">学员</div>
+        			 <div class="stusName">林小白</div>
+        			 <button class="commitBtn commitBtn1">提交</button>
+        		</div>
+        	</div>
+        		
+        </div>
+    </div>
+    <div class="page13">
+        <div class="p13">
+        	<!-- 条 -->
+        	<div class="viewHead"></div>
+        	<div class="viewHeadTail"></div>
+        	<div class="viewBottom"></div>
+        	<div class="viewBottomTail"></div>
+        	<div class="viewLeft">
+        		<!-- 课后习题 -->
+	        	<div class="exerciseTitle">课后练习</div>
+	        	<div class="exerciseblock1"></div>
+	        	<div class="exerciseTitleSmall">判断题</div>
+	        	<div class="exerciseblock2"></div>
+
+	        	<div class="exerciseQuestion">2.离合器相当于一个动力开关，可以传递或切断发动机向变速器输入的动力。</div>
+	        	<div class="exerciseImg"><img src="images/bg_img_liheqi.png" /></div>
+        	</div>
+        	<div class="viewRight">
+        		<div class="exerciseChose1">请判断:</div>
+        		<div class="exerciseAnswer1">
+        			<div class="leftArea">
+        				<div class="container box">
+        					<button class="answerRight rightClickClass">对</button>
+        				</div>
+        			</div>
+        			<div class="rightArea">
+	        			<div class="container box">
+	        				<button class="answerFalse falseClickClass">错</button>
+	        			</div>
+        			</div>
+        		</div>
+        		<div class="stuName">
+        			 <div class="stuHead"><img src="images/bg_img_avatar_learner.png"/></div>
+        			 <div class="stusNameLabel">学员</div>
+        			 <div class="stusName">林小白</div>
+        			 <button class="commitBtn commitBtn2">提交</button>
+        		</div>
+        		
+        	</div>
+        </div>
+    </div>
+    <div class="page14">
+        <div class="p14">
+        	<!-- 条 -->
+            <div class="viewHead"></div>
+            <div class="viewHeadTail"></div>
+            <div class="viewBottom"></div>
+            <div class="viewBottomTail"></div>
+            <div class="viewLeft">
+                <!-- 课后习题 -->
+                <div class="exerciseTitle">课后练习</div>
+                <div class="exerciseblock1"></div>
+                <div class="exerciseTitleSmall">单选题</div>
+                <div class="exerciseblock2"></div>
+
+                <div class="exerciseQuestion">3.广汽丰田热销车-凯美瑞双擎用哪种驱动方式？</div>
+                <div class="exerciseImg"><img src="images/bg_img_kaimeirui.png" /></div>
+            </div>
+            <div class="viewRight">
+                <div class="exerciseChose">请选择正确答案:</div>
+                <div class="exerciseAnswer2">
+                     <button class="exerciseAnswer2_1 exerciseAnswer2Btn" id ="exerciseAnswer2_1"></button>
+                     <button class="exerciseAnswer2_2 exerciseAnswer2Btn" id ="exerciseAnswer2_2"></button>
+                     <button class="exerciseAnswer2_3 exerciseAnswer2Btn" id ="exerciseAnswer2_3"></button>
+                     <button class="exerciseAnswer2_4 exerciseAnswer2Btn" id ="exerciseAnswer2_4"></button>
+                </div>
+                <div class="stuName">
+                     <div class="stuHead"><img src="images/bg_img_avatar_learner.png"/></div>
+                     <div class="stusNameLabel">学员</div>
+                     <div class="stusName">林小白</div>
+                     <button class="commitBtn commitBtn3">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="page15">
+        
+    </div>
+    <div class="page16">
+        <!-- <div class="title">SA技术专题</div> -->
+        <div class="end">本章完</div>
+        <span class="backto">保存进度</span>
+        <span class="reset">重学本章</span>
+    </div>
+    </div>
+</div>
+    <script src="js/main.js"></script>
+</body>
+</html>
