@@ -1,0 +1,15 @@
+﻿<?xml version = "1.0" encoding = "utf-8"?>
+
+<!--说明：
+chapter：章节次序
+section：节
+  name:节名称，不知道可随便填
+  path：可不填
+  duration：节动画时长（向上取整，单位分钟，如节动画时长1:10秒，取2分钟）
+  -->
+
+<root>
+  <chapter name="第一章" >
+    <section name="1.1 喷漆工具设备的保养" path=""  duration="10" ></section>
+  </chapter>
+</root>
