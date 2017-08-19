@@ -361,29 +361,29 @@ var animPages = [];
 //                  ""
 //                  ];//json的地址
 
-// var paths = [    "http://zkforever.cn/DeployMyHtml/Transmission/page2/data.json",
-//                  "http://zkforever.cn/DeployMyHtml/Transmission/page3/data.json",
-//                  "http://zkforever.cn/DeployMyHtml/Transmission/page4/data.json",
-//                  "",
-//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage1/data.json",
-//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage2/data.json",
-//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage3/data.json",
-//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage4/data.json",
-//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage5/data.json",
-//                  ""
-//                  ];//json的地址
-
-var paths = [    "t/page2/data.json",
-                 "t/page3/data.json",
-                 "t/page4/data.json",
+var paths = [    "http://zkforever.cn/DeployMyHtml/Transmission/page2/data.json",
+                 "http://zkforever.cn/DeployMyHtml/Transmission/page3/data.json",
+                 "http://zkforever.cn/DeployMyHtml/Transmission/page4/data.json",
                  "",
-                 "c/clutchPage1/data.json",
-                 "c/clutchPage2/data.json",
-                 "c/clutchPage3/data.json",
-                 "c/clutchPage4/data.json",
-                 "c/clutchPage5/data.json",
+                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage1/data.json",
+                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage2/data.json",
+                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage3/data.json",
+                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage4/data.json",
+                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage5/data.json",
                  ""
                  ];//json的地址
+
+// var paths = [    "t/page2/data.json",
+//                  "t/page3/data.json",
+//                  "t/page4/data.json",
+//                  "",
+//                  "c/clutchPage1/data.json",
+//                  "c/clutchPage2/data.json",
+//                  "c/clutchPage3/data.json",
+//                  "c/clutchPage4/data.json",
+//                  "c/clutchPage5/data.json",
+//                  ""
+//                  ];//json的地址
 
 
 var prePage = 1; //翻页前上一页
