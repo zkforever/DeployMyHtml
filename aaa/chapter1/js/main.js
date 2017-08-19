@@ -373,15 +373,15 @@ var animPages = [];
 //                  ""
 //                  ];//json的地址
 
-var paths = [    "../t/page2/data.json",
-                 "../t/page3/data.json",
-                 "../t/page4/data.json",
+var paths = [    "t/page2/data.json",
+                 "t/page3/data.json",
+                 "t/page4/data.json",
                  "",
-                 "../c/clutchPage1/data.json",
-                 "../c/clutchPage2/data.json",
-                 "../c/clutchPage3/data.json",
-                 "../c/clutchPage4/data.json",
-                 "../c/clutchPage5/data.json",
+                 "c/clutchPage1/data.json",
+                 "c/clutchPage2/data.json",
+                 "c/clutchPage3/data.json",
+                 "c/clutchPage4/data.json",
+                 "c/clutchPage5/data.json",
                  ""
                  ];//json的地址
 
