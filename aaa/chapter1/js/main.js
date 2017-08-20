@@ -388,16 +388,30 @@ var animPages = [];
 //                  "http://eln.gtmc.com.cn/ELN_TEST/1/clutch/clutchPage5/data.json",
 //                  ""
 //                  ];//json的地址
+
+// var paths = [    "http://zkforever.cn/DeployMyHtml/Transmission/page2/data.json",
+//                  "http://zkforever.cn/DeployMyHtml/Transmission/page3/data.json",
+//                  "http://zkforever.cn/DeployMyHtml/Transmission/page4/data.json",
+//                  "",
+//                  "",
+//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage1/data.json",
+//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage2/data.json",
+//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage3/data.json",
+//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage4/data.json",
+//                  "http://zkforever.cn/DeployMyHtml/clutch/clutchPage5/data.json",
+//                  ""
+//                  ];//json的地址
+
 var paths = [    "http://zkforever.cn/DeployMyHtml/Transmission/page2/data.json",
                  "http://zkforever.cn/DeployMyHtml/Transmission/page3/data.json",
                  "http://zkforever.cn/DeployMyHtml/Transmission/page4/data.json",
                  "",
                  "",
-                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage1/data.json",
-                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage2/data.json",
-                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage3/data.json",
-                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage4/data.json",
-                 "http://zkforever.cn/DeployMyHtml/clutch/clutchPage5/data.json",
+                 "",
+                 "",
+                 "",
+                 "",
+                 "",
                  ""
                  ];//json的地址
 
@@ -419,6 +433,14 @@ function initBody(page,callback){
         // if (page >= 8) {
         //     type = "svg";
         // }
+
+        if (paths[page-2] == "") {
+        	if (callback) {
+                callback();
+            }
+            return;
+        }
+
         var animDataPage = {
             wrapper: document.getElementById('bodymovinPage'+page),
             animType: type,
@@ -474,7 +496,7 @@ function initBodyBlock (page,pageNext,pagePre){
     }    
 }
 //加载ae
-var isAllLoad = false;
+var isAllLoad = true;
 function initBodyPages(page) {
     if (!isAllLoad) {
         initBody(page,function(){
@@ -496,6 +518,8 @@ function initBodyPages(page) {
             });
             return;
         }
+
+
         if (page == 4) {
             initBodyBlock(page,page+3,page-1); 
         }else {
