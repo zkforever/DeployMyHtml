@@ -241,6 +241,7 @@ function playAudio(src, e) {
 
 //控制每页的声音播放
 function playPageAudio(){
+    // Pace.stop();
     switch (currentPage){
         case 1:{
             //sa传动系统
@@ -257,9 +258,9 @@ function playPageAudio(){
                  playAudio("t4.mp3");
                  setTimeout(function (){
                     playAudio("t5.mp3");
-                 }, 19500);
+                 }, 12250);
                 
-             }, 17000);
+             }, 14000);
             break;
         };
         case 3:{
@@ -285,15 +286,20 @@ function playPageAudio(){
             break;
         };
         case 7:{
-            playAudio("c2.mp3");
+            setTimeout(function (){
+                playAudio("c2.mp3");
+            }, 2000);
             break;
         }
         case 8:{
             //离合器的组成与构成
-            playAudio("c3.mp3");
-            setTimeout(function (){
+             setTimeout(function (){
+                playAudio("c3.mp3");
+                setTimeout(function (){
                 playAudio("c4.mp3");
             }, 7000);
+            }, 1000);
+            
             break;
         };
         case 9:{
@@ -409,10 +415,10 @@ function initBody(page,callback){
         return;
     }
     if (animPages[page] == undefined || animPages[page] == null){
-        var type = "html";
-        if (page >= 9) {
-            type = "svg";
-        }
+        var type = "svg";
+        // if (page >= 8) {
+        //     type = "svg";
+        // }
         var animDataPage = {
             wrapper: document.getElementById('bodymovinPage'+page),
             animType: type,
@@ -435,6 +441,15 @@ function initBody(page,callback){
             }
         }
     }else {
+        if (!isAllLoad) {
+            for (var i = 0; i < animPages.length; i++) {
+                var aPage = animPages[i];
+                if (i != page && aPage != undefined && aPage != null) {
+                    aPage.destroy();
+                    aPage = null;
+                }
+            }
+        }
          if (callback) {
             callback();
          }
@@ -458,27 +473,34 @@ function initBodyBlock (page,pageNext,pagePre){
         });  
     }    
 }
-
+//加载ae
+var isAllLoad = false;
 function initBodyPages(page) {
-    if (page == 1 || page == 5 || page == 6) {
-        initBody(page+1,function(){
+    if (!isAllLoad) {
+        initBody(page,function(){
             resetPage(currentPage);
         });
-        return;
-    }else if(page == 11){
-         initBody(page-1,function(){
-            resetPage(currentPage);
-        });
-    }else if (page >= 12){
-         initBody(11,function(){
-            resetPage(currentPage);
-        });
-        return;
-    }
-    if (page == 4) {
-        initBodyBlock(page,page+3,page-1); 
-    }else {
-        initBodyBlock(page,page+1,page-1); 
+    }else{
+       if (page == 1 || page == 5 || page == 6) {
+            initBody(page+1,function(){
+                resetPage(currentPage);
+            });
+            return;
+        }else if(page == 11){
+             initBody(page-1,function(){
+                resetPage(currentPage);
+            });
+        }else if (page >= 12){
+             initBody(11,function(){
+                resetPage(currentPage);
+            });
+            return;
+        }
+        if (page == 4) {
+            initBodyBlock(page,page+3,page-1); 
+        }else {
+            initBodyBlock(page,page+1,page-1); 
+        }
     }
 }
 //============================初始化AE动画结束
