@@ -8289,12 +8289,9 @@ AnimationItem.prototype.setParams = function(params) {
         //     this.path = params.path.substr(0,params.path.lastIndexOf('/')+1);
         // }
         this.assetsPath = params.assetsPath;
-        this.fileName = params.path.substr(params.path.lastIndexOf('/')+1);
+        // this.fileName = params.path.substr(params.path.lastIndexOf('/')+1);
         // this.fileName = this.fileName.substr(0,this.fileName.lastIndexOf('.json'));
-        console.log("this.fileName==="+params.path);
-        var data = JSON.parse(params.path);
-        console.log("aaa==="+data);
-        self.configAnimation(data);
+        self.configAnimation(params.path);
        
         // xhr.open('GET', params.path, true);
         // xhr.setRequestHeader('Access-Control-Allow-Origin','*'); 
@@ -8413,12 +8410,8 @@ AnimationItem.prototype.loadNextSegment = function() {
     // var segmentPath = this.path+this.fileName+'_' + this.segmentPos + '.json';
     this.segmentPos += 1;
     //usage:
-    readTextFile(this.path, function(text){
-        var data = JSON.parse(text);
-        console.log(data);
-        self.includeLayers(JSON.parse(text));
-    });
-
+    self.includeLayers(this.path);
+    
     // xhr.open('GET', segmentPath, true);
     // xhr.send();  
     // xhr.onreadystatechange = function () {

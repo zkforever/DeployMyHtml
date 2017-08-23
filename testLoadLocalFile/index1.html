@@ -12,14 +12,14 @@
 </div>
 
 <script>
-var jsonStr = JSON.stringify(tPage2);
+// var jsonStr = JSON.stringify(tPage2);
     var animData = {
         wrapper: document.getElementById('bodymovin'),
         animType: 'cavas',
         loop: false,
         prerender: true,
         autoplay: true,
-        path: jsonStr
+        path: tPage2
 
     };
     var anim = bodymovin.loadAnimation(animData);
