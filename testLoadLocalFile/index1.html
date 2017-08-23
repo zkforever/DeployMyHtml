@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%">
+<head>
+    <script type="text/javascript" src="Transmission/page2/data.json"></script>
+     <script src="bodymovin.js"></script>
+</head>
+<body style="background-color:#ccc; margin: 0px;height: 100%; font-family: sans-serif;font-size: 10px">
+
+<div style="width:100%;height:100%;background-color:#fff;" id="bodymovin"></div>
+<div>
+    <input type="button" name="开始" onclick="aa()" />
+</div>
+
+<script>
+var jsonStr = JSON.stringify(tPage2);
+    var animData = {
+        wrapper: document.getElementById('bodymovin'),
+        animType: 'cavas',
+        loop: false,
+        prerender: true,
+        autoplay: true,
+        path: jsonStr
+
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    anim.addEventListener("complete",function(){
+        console.log("complete");
+    });
+    function aa(){
+        anim.stop();
+        anim.play();
+    }
+
+</script>
+</body>
+</html>
