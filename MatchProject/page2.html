@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="titleName">
+			<h3>报名信息</h3>
+		</div>
+		<div>
+			<div class="contact_form">
+				<ul>
+					<li>
+						<label for="area">区域:</label>
+						<button id="chooseArea">请选择区域</button>
+					</li>
+					<li>
+						<label for="school">所在学校:</label>
+						<button id="chooseSchool">请选择学校</button>
+					</li>
+					<li>
+						<label for="name">姓名:</label>
+						<input type="text" placeholder="请输入姓名" />
+					</li>
+					<li>
+						<label for="tel">手机:</label>
+						<input id ="tel" type="text" pattern="1[0-9]{10}" placeholder="请输入手机号码" />
+					</li>
+					<li>
+						<button class="btn btn-small get-code"  id="J_getCode">获取验证码</button>
+						<button class="btn btn-small reset-code" id="J_resetCode" style="display:none;"><span id="J_second">60</span>秒后重发</button>
+					</li>
+					<li>
+						<label for="name">验证码:</label>
+						<input type="tel" pattern="[0-9]{4}" placeholder="请输入验证码" />
+					</li>
+					<li>
+						<button class="nextButton submitBtn">提交</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
