@@ -17,8 +17,13 @@
     </style>
    </head>
     <script>
-        var url = "yxmsg.pdf";
-        window.open("pdfjs/web/viewer.html?file=" + url);
+      	function openFile () {
+        		var url = "yxmsg.pdf";
+        		window.open("pdfjs/web/viewer.html?file=" + url);
+      	}
+    </script>
+        <input type="button" onclick="openFile()" value="打开">
+
     </script>
     <body>
     </body>
