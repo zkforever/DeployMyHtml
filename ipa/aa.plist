@@ -1,1 +1,30 @@
 
+<plist version="1.0">
+<dict>
+<key>items</key>
+<array>
+<dict>
+<key>assets</key>
+<array>
+<dict>
+<key>kind</key>
+<string>software-package</string>
+<key>url</key>
+<string>http://testgms.oss-cn-shenzhen.aliyuncs.com/ipa/GMS0414.ipa</string>
+</dict>
+</array>
+<key>metadata</key>
+<dict>
+<key>bundle-identifier</key>
+<string>com.gtmc.gmstest.NewApp</string>
+<key>bundle-version</key>
+<string>2.2.237</string>
+<key>kind</key>
+<string>software</string>
+<key>title</key>
+<string>LexusH</string>
+</dict>
+</dict>
+</array>
+</dict>
+</plist>
