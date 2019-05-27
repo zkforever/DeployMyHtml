@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/main.css" />
+		<title>填写预约信息</title>
+	</head>
+	<body style="background: #FFFFFF;">
+		<div class="failedDiv"> 
+			<img src="img/failedFlower.png" class="failedImg" />
+		</div>
+		<div class="failedTitle">预约失败</div>
+		<div class="failedDesp">网络异常请重试</div>
+		<div class="backRetry">返回重试</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+	<script>
+		$(".backRetry").on("click",function(e){
+			history.go(-1);
+		});
+	</script>
+</html>

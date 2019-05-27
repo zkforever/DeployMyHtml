@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="detailApp">
+
+	<head>
+		<meta charset="utf-8">
+		<title>顾问详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<script type="text/javascript" src="js/angular-animate.js"></script>
+	</head>
+
+	<body ng-controller="detailController">
+		<div class="choose">选TA</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper salesWrapper">
+				<div class="swiper-slide">
+					<div class="salesImgDetail">
+						<!--<img src="img/1.jpg" />-->
+					</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-next"></div>
+    			<div class="swiper-button-prev"></div>
+		</div>
+		<div class="salesInfo">
+			<div class="salesBasic">
+				<span class="salesName">
+								{{salesObj.StfName}}
+							</span>
+				<span class="salesOtherInfo">
+								{{salesObj.Gender}}，{{salesObj.Age}}，从业{{salesObj.WorkingExperience}}年
+							</span>
+			</div>
+			<div class="salesContent">
+				<div class="rowClassTop">
+					<div class="typeKeyShort Specialty">
+						专长
+					</div>
+					<div class="SpecialityClassValueShortDetail Specialty">
+						{{salesObj.Speciality}}
+					</div>
+				</div>
+				<div class="rowClassMiddle">
+					<div class="typeKeyShort carModele">
+						家乡
+					</div>
+					<div class="SpecialityClassValueShortDetail carModele">
+						{{salesObj.Hometown}}
+					</div>
+				</div>
+				<div class="rowClassMiddle">
+					<div class="typeKeyShort Tip">
+						标签
+					</div>
+					<div class="SpecialityClassValueShortDetail Tip">
+						{{salesObj.Labels}}
+					</div>
+				</div>
+				<div class="rowClassMiddle">
+					<div class="typeKeyShort Tip">
+						个人简介
+					</div>
+					<div class="SpecialityClassValueLongDetail Tip">
+						{{salesObj.PersonalProfile}}
+					</div>
+				</div>
+			</div>
+			<!-- <img class="moreBtn" src="img/iconMore.png" /> -->
+		</div>
+		<script type="text/tmplate" id="tmplateSaleHead">
+			<div class="swiper-slide">
+				<div class="salesImgDetail" ontouchmove="return false;">
+						<img src="{{Url}}" style="{{showImg}}" />
+						<!--<img class="playOrPause"  style="{{showVideo}}" id="{{index}}"></img>-->
+						<video class="video1" id="video{{index}}" style="{{showVideo}}" poster="{{Thumb}}" controls>
+    								<source src="{{Url}}" type="video/mp4" />
+    								<!--http://www.w3school.com.cn/example/html5/mov_bbb.mp4-->
+  						</video>
+  						<!--<div class="video-controls"> <button id="{{index}}">播放/暂停</button> </div>-->
+				</div>
+			</div>
+		
+		</script>
+		
+		
+		<input type="hidden" id="openid" name="openid" value="@ViewBag.OpenId" />
+		<script src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/dataLoader.js"></script>
+		<script type="text/javascript" src="js/zyCommonUtil.js" ></script>
+		<script type="text/javascript" src="js/detail.js"></script>
+		
+	</body>
+
+</html>

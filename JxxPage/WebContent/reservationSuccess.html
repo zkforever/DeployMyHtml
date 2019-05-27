@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/main.css" />
+		<title>填写预约信息</title>
+	</head>
+	<body style="background: #FFFFFF;">
+		<div class="successDiv"> 
+			<img src="img/successSun.png" class="successImg" />
+		</div>
+		<div class="successTitle">预约成功！</div>
+		<div class="successDespTop">请留意您的预留电话，</div>
+		<div class="successDesp">工作人员将在24小时内与您联系</div>
+		<div class="lastDesp"><span class="threeSec">3s</span><span class="auto">后自动</span><span class="backToList">返回</span></div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+	<script>
+		$(".lastDesp").on("click",function(e){
+			var len = (window.history.length-1)*(-1);
+			history.go(len);
+		});
+		var time = 3;
+		function startTime(){
+			$('.threeSec').html(time+"s");
+			if (time > 0){
+				setTimeout('startTime()',1000);
+				time--;
+			}else{
+				console.log(window.history.length);
+				var len = (window.history.length-1)*(-1);
+				history.go(len);
+			}
+		}
+		startTime();
+		
+	</script>
+</html>
