@@ -11,11 +11,16 @@
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="js/angular.js" ></script>
 		<script type="text/javascript" src="js/angular-animate.js"></script>
+		<style type="text/css">
+			body {
+				overflow-y: scroll;
+			}
+		</style>
 	</head>
 
 	<body ng-controller="detailController">
 		<div class="choose">选TA</div>
-		<div class="swiper-container">
+		<div class="swiper-container" id="swiper-container">
 			<div class="swiper-wrapper salesWrapper">
 				<div class="swiper-slide">
 					<div class="salesImgDetail">

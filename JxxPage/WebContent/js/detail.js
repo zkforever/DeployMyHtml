@@ -4,11 +4,30 @@ var salesID = getQueryString("consultantCode");
 var saleObj;
 var images = [];
 console.log(salesID);
+
+var _start = 0,
+	_moveY = 0,
+	_num = 0
+document.getElementById('swiper-container').addEventListener('touchstart',function(e){
+	_start = e.touches[0].clientY;
+});
+document.getElementById('swiper-container').addEventListener('touchmove',function(ev){
+	_moveY = ev.touches[0].clientY;
+	_num = _moveY - _start;
+	if(_num){
+		 var t = document.documentElement.scrollTop || document.body.scrollTop;
+		$(window).scrollTop(t - _num)
+	}
+});
+
 //var openid = document.getElementById("openid").value;
 var swiper = new Swiper('.swiper-container', {
+//	direction:'vertical',
 	loop: true,
 	centeredSlides: true,
 	slidesPerView: 'auto',
+    observer: true,//修改swiper自己或子元素时，自动初始化swiper
+    observeParents: true,//修改swiper的父元素时，自动初始化swiper
 	init: false,
 	 navigation: {
         nextEl: '.swiper-button-next',
@@ -108,7 +127,7 @@ function loadDetail(data){
 		var saleHtml = attachTemplateToData(templateSale, images);
 		$(".salesWrapper").html(saleHtml);
 		swiper.init();
-		// $scope.$apply();
+				// $scope.$apply();
 	}
 }
 
