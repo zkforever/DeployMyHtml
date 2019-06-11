@@ -14,9 +14,11 @@ document.getElementById('swiper-container').addEventListener('touchstart',functi
 document.getElementById('swiper-container').addEventListener('touchmove',function(ev){
 	_moveY = ev.touches[0].clientY;
 	_num = _moveY - _start;
-	if(_num){
-		 var t = document.documentElement.scrollTop || document.body.scrollTop;
-		$(window).scrollTop(t - _num)
+	if (Math.abs(_num) > 10) {
+		if(_num){
+			 var t = document.documentElement.scrollTop || document.body.scrollTop;
+			$(window).scrollTop(t - _num)
+		}
 	}
 });
 
