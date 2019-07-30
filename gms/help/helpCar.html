@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+		<!-- 忽略将页面中的数字识别为电话号码  （ios上会明显 有时候会把数字当成电话号码）-->
+		<meta name="format-detection" content="telephone=no" />
+		<!-- 忽略Android平台中对邮箱地址的识别 -->
+		<meta name="format-detection" content="email=no" />
+		<!-- 让浏览器用最新内核渲染。-->
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<!-- jQuery文件 -->
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<!-- 自定义js文件 -->
+		<title></title>
+		<style type="text/css">
+			.notice-content {
+				display: none;
+			}
+			
+			#contentWrapper {
+				padding: 0 15px;
+			}
+			.notice-title{
+				height: 60px;
+				border-bottom: 1px solid rgb(237,237,237);
+				line-height: 60px;
+				color: rgb(50,50,50);
+				font-size: 16px;
+				overflow: hidden;
+			}
+			.notice-title span{
+				display: block;
+			}
+			.notice-content ul{
+				padding: 10px 0;
+			}
+			.notice-content li{
+				position: relative;
+				padding-left: 10px;
+				line-height: 24px;
+				color: rgb(127,127,127);
+				font-size: 14px;
+			}
+			.notice-content li::after{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 11px;
+				width: 2px;
+				height: 2px;
+				background-color: rgb(127,127,127);
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+			/*	-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);*/
+			}
+			.notice-title{
+				position: relative;
+			}
+			.notice-title::after{
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 30px;
+				height: 30px;
+				margin-top: -15px;
+				background: url(images/help-icon.png) no-repeat center/cover;
+				transform-origin: center;
+				-webkit-transition: transform .5s;
+				transition: transform .5s;
+			}
+			.notice-title.active::after{
+				-webkit-transform: rotateZ(-90deg);
+				transform: rotateZ(-90deg);
+			}
+		</style>
+	</head>
+
+	<body class="">
+		<div id="contentWrapper">
+			<div class="noticeList">
+				<div class="notice-item">
+					<div class="notice-title">
+						<span>为何机动车登记证拍照后识别总是失败</span>
+					</div>
+					<div class="notice-content">
+						<ul>
+							<li>请确保使用的是《机动车登记证》，不是行驶证、身份证。</li>
+							<li>请对着证件内页（有车主信息和车辆信息的两页）拍照，不要对着封面拍照。</li>
+							<li>请确保您提交的拍照照片清晰，模糊的照片会影响识别效果。</li>
+							<li>拍照时请留意对焦情况，如果自动对焦效果不理想，请尝试手动触摸对焦的方式进行调整。</li>
+							<li>拍照时请确保机动车登记证信息页，打开平铺并完整出现在拍摄边界提示框内。</li>
+						</ul>
+					</div>
+				</div>
+				<div class="notice-item">
+					<div class="notice-title">
+						<span>为什么机动车登记证会提交失败</span>
+					</div>
+					<div class="notice-content">
+						<ul>
+							<li>请确认是否在进行重复提交，信息完全一样的机动车登记证是不可以重复提交的。</li>
+							<li>我们会对机动车登记证上面所识别出的若干信息进行检查，比如身份证号码，统一社会信用代码是否正确等，如果信息不正确是无法正常提交的。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<!-- 做程序时 把下一行代码和本注释一起删除 并用<include file="路径"/>引进底部 -->
+		<!-- <div id="tabbars"></div> -->
+	</body>
+
+</html>
+<script>
+	$('body').on(Click, '.noticeList .notice-title', function() {
+		$(this).siblings('.notice-content').slideToggle();
+		$(this).toggleClass('active')
+	})
+</script>
