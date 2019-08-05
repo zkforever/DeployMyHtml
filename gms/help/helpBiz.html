@@ -15,69 +15,7 @@
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 		<!-- 自定义js文件 -->
 		<title></title>
-		<style type="text/css">
-			.notice-content {
-				display: none;
-			}
-			
-			#contentWrapper {
-				padding: 0 15px;
-			}
-			.notice-title{
-				height: 60px;
-				border-bottom: 1px solid rgb(237,237,237);
-				line-height: 60px;
-				color: rgb(50,50,50);
-				font-size: 16px;
-				overflow: hidden;
-			}
-			.notice-title span{
-				display: block;
-			}
-			.notice-content ul{
-				padding: 10px 0;
-			}
-			.notice-content li{
-				position: relative;
-				padding-left: 10px;
-				line-height: 24px;
-				color: rgb(127,127,127);
-				font-size: 14px;
-			}
-			.notice-content li::after{
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 11px;
-				width: 2px;
-				height: 2px;
-				background-color: rgb(127,127,127);
-				-webkit-border-radius: 50%;
-				border-radius: 50%;
-			/*	-webkit-transform: translateY(-50%);
-				transform: translateY(-50%);*/
-			}
-			.notice-title{
-				position: relative;
-			}
-			.notice-title::after{
-				content: '';
-				position: absolute;
-				top: 50%;
-				right: 0;
-				width: 30px;
-				height: 30px;
-				margin-top: -15px;
-				background: url(images/help-icon.png) no-repeat center/cover;
-				transform-origin: center;
-				-webkit-transition: transform .5s;
-				transition: transform .5s;
-			}
-			.notice-title.active::after{
-				-webkit-transform: rotateZ(-90deg);
-				transform: rotateZ(-90deg);
-			}
-		</style>
+		<link rel="stylesheet" href="css/main.css" />
 	</head>
 
 	<body class="">
@@ -89,10 +27,10 @@
 					</div>
 					<div class="notice-content">
 						<ul>
-							<li>请确保证件为新版营业执照（三证合一之后的）</li>
-							<li>请确保您提交的拍照照片清晰，模糊的照片会影响识别效果。</li>
-							<li>拍照时请留意对焦情况，如果自动对焦效果不理想，请尝试手动触摸对焦的方式进行调整。</li>
-							<li>拍照时请确保营业执照信息页，打开平铺并完整出现在拍摄边界提示框内。</li>
+							<li>请确保证件为<span>新版营业执照（三证合一之后的）</span></li>
+							<li>请确保您提交的<span>拍照照片清晰</span>，模糊的照片会影响识别效果。</li>
+							<li>拍照时请留意对焦情况，如果自动对焦效果不理想，请尝试<span>手动触摸对焦</span>的方式进行调整。</li>
+							<li>拍照时请确保营业执照信息页，<span>打开平铺</span>并完整出现在拍摄边界提示框内。</li>
 						</ul>
 					</div>
 				</div>
@@ -102,8 +40,8 @@
 					</div>
 					<div class="notice-content">
 						<ul>
-							<li>我们会对营业执照上面所识别出的若干信息进行检查，比如统一社会信用代码是否正确等，如果信息不正确是无法正常提交的。</li>
-							<li>营业执照提交时只能授权给一个对象(人)，提交成功后将无法再授权给其他人。</li>
+							<li>我们会对营业执照上面所识别出的若干信息进行检查，比如统一社会信用代码是否正确等，如果<span>信息不正确是无法正常提交的</span>。</li>
+							<li>营业执照提交时<span>只能授权给一个对象(人)</span>，提交成功后将无法再授权给其他人。</li>
 						</ul>
 					</div>
 				</div>
