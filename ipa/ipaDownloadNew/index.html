@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-find="_8"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script charset="utf-8"></script>
+    
+    <title>测试ipa</title>
+
+    <style>
+        input, img, select {
+            vertical-align: middle;
+        }
+        img {
+            display:block;
+            text-align:center;
+            margin:0;
+        }
+        body, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, form, img, div, iframe {
+            border: 0 none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script language="javascript">
+
+    window.onload = function () {
+        var u = navigator.userAgent;
+        if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+			alert("暂不支持android手机");
+        } else if (u.indexOf('iPhone') > -1) {
+            document.getElementById("img1").setAttribute("src", "img/IOS_01.png");
+            document.getElementById("img2").setAttribute("src", "img/IOS_02.png");v
+            document.getElementById("downloadlink").setAttribute("href", "itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/zkforever/DeployMyHtml/master/ipa/testNew.plist");
+        } else if (u.indexOf('Windows Phone') > -1) {//winphone手机
+            alert("暂不支持WinPhone手机");
+        }
+    }
+    </script>
+
+</head>
+<body data-find="_7">
+    <img id="img1" alt="" src="img/IOS_01.png">
+    <a id="downloadlink" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/zkforever/DeployMyHtml/master/ipa/test.plist" style="color:orange; font-size:44px">
+        <img id="img2" alt="" src="img/IOS_02.png">
+    </a>
+
+</body></html>
